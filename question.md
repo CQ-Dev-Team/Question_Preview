@@ -107,3 +107,53 @@ if __name__ == "__main__":
         7 1
         8 1
         ```
+
+
+## Example 3 ( Array Formatter)
+
+The following example illustrates a question requiring a Python function in the body that add 1 to each element in array.
+
+### **Head**
+```python
+# Importing necessary modules
+import sys
+```
+
+### **Body**
+This part is visible to the user:
+```python
+    # Write your code below
+    def add_one_to_array(arr):
+        """
+        Accepts an array and adds 1 to each element.
+        
+        Parameters:
+        arr (list): List of integers
+        
+        Returns:
+        list: List with 1 added to each element
+        """
+        return [x + 1 for x in arr]
+```
+
+### **Tail**
+```python
+# Test cases (hidden from the user)
+if __name__ == "__main__":
+    # Take custom input from the user
+    input_array = input().strip().split()  # Input taken as space-separated values
+    # Convert string array to int array
+    int_array = [int(x) for x in input_array]
+    # Call user function
+    updated_array = add_one_to_array(int_array)
+    # Print the result
+    print(' '.join(map(str, updated_array)))
+```
+
+### **Test Case Values**
+   - `Input Parameters`:
+   
+        ```1 2 3 4```
+   - `Expected Output`:
+
+        ```2 3 4 5```
